@@ -5,11 +5,11 @@ require "harvest_notifier/templates/base"
 module HarvestNotifier
   module Templates
     class WeeklyReport < Base
-      REMINDER_TEXT = "*Guys, don't forget to report the working hours in Harvest every day.*"
-      USERS_LIST_TEXT = "Here is a list of people who didn't report the working hours for the last week: *%<period>s*"
-      REPORT_NOTICE_TEXT = "_Please, report time and react with :heavy_check_mark: for this message._"
-      SLACK_ID_ITEM = "• <@%<slack_id>s>: *%<missing_hours>s* hours of %<weekly_capacity>s"
-      FULL_NAME_ITEM = "• %<full_name>s: *%<missing_hours>s* hours of %<weekly_capacity>s"
+      REMINDER_TEXT = "*Hallo samen, vergeet niet je uren te boeken in Harvest.*"
+      USERS_LIST_TEXT = "Hierbij een overzicht van de mensen die vergeten zijn de uren te boeken vorige week: *%<period>s*"
+      REPORT_NOTICE_TEXT = "_Controleer je uren en regeer met :heavy_check_mark: in dit bericht._"
+      SLACK_ID_ITEM = "• <@%<slack_id>s>: *%<missing_hours>s* uren van %<weekly_capacity>s"
+      FULL_NAME_ITEM = "• %<full_name>s: *%<missing_hours>s* uren van %<weekly_capacity>s"
 
       def generate # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
         Jbuilder.encode do |json| # rubocop:disable Metrics/BlockLength
