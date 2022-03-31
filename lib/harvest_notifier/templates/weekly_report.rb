@@ -7,7 +7,7 @@ module HarvestNotifier
     class WeeklyReport < Base
       REMINDER_TEXT = "*Hallo samen, vergeet niet je uren te boeken in Harvest.*"
       USERS_LIST_TEXT = "Hierbij een overzicht van de mensen die vergeten zijn de uren te boeken vorige week: *%<period>s*"
-      REPORT_NOTICE_TEXT = "_Controleer je uren en regeer met :heavy_check_mark: in dit bericht._"
+      REPORT_NOTICE_TEXT = "_Controleer je uren en regeer met :heavy_check_mark: op dit bericht._"
       SLACK_ID_ITEM = "• <@%<slack_id>s>: *%<missing_hours>s* uren van %<weekly_capacity>s"
       FULL_NAME_ITEM = "• %<full_name>s: *%<missing_hours>s* uren van %<weekly_capacity>s"
 
@@ -69,7 +69,7 @@ module HarvestNotifier
                   json.type "button"
                   json.text do
                     json.type "plain_text"
-                    json.text ":repeat: Done!"
+                    json.text ":repeat: Bijwerken!"
                   end
                   json.value refresh_value
                 end
