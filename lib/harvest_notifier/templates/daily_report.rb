@@ -69,7 +69,7 @@ module HarvestNotifier
                   json.type "button"
                   json.text do
                     json.type "plain_text"
-                    json.text ":repeat: Done"
+                    json.text ":heavy_check_mark: Klaar!"
                   end
                   json.value refresh_value
                 end
