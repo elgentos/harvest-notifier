@@ -50,6 +50,7 @@ module HarvestNotifier
 
     def harvest_user(user)
       hours = user["weekly_capacity"].to_f / 3600
+      threshold = hours / 8 * 2;
       full_name = user.values_at("first_name", "last_name").join(" ")
 
       user.slice("email", "is_contractor", "is_active").merge(
@@ -57,6 +58,7 @@ module HarvestNotifier
           "full_name" => full_name,
           "weekly_capacity" => hours,
           "missing_hours" => hours,
+          "threshold" => threshold,
           "total_hours" => 0
         }
       )
@@ -117,7 +119,7 @@ module HarvestNotifier
     end
 
     def missing_hours_insignificant?(user)
-      user["missing_hours"] <= missing_hours_threshold
+      user["missing_hours"] <= user["threshold"]
     end
 
     def contractor?(user)
