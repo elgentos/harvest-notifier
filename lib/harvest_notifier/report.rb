@@ -50,7 +50,7 @@ module HarvestNotifier
 
     def harvest_user(user)
       hours = user["weekly_capacity"].to_f / 3600
-      threshold = hours / 8 * 2;
+      threshold = hours / 8 * 2
       full_name = user.values_at("first_name", "last_name").join(" ")
 
       user.slice("email", "is_contractor", "is_active").merge(
