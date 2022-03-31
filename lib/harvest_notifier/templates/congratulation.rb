@@ -5,7 +5,7 @@ require "harvest_notifier/templates/base"
 module HarvestNotifier
   module Templates
     class Congratulation < Base
-      CONGRATS_TEXT = "Jippie, iedereen heeft zijn uren geboekt voor *%<period>s*! :tada:"
+      CONGRATS_TEXT = "NICE!!! iedereen heeft zijn uren geboekt voor *%<period>s*! :tada:"
 
       def generate # rubocop:disable Metrics/MethodLength
         Jbuilder.encode do |json|
