@@ -61,7 +61,7 @@ module HarvestNotifier
                   json.style "primary"
                   json.text do
                     json.type "plain_text"
-                    json.text "Report Time"
+                    json.text "Uren boeken"
                   end
                 end
 
@@ -69,7 +69,7 @@ module HarvestNotifier
                   json.type "button"
                   json.text do
                     json.type "plain_text"
-                    json.text ":repeat: Refresh"
+                    json.text ":repeat: Done!"
                   end
                   json.value refresh_value
                 end
