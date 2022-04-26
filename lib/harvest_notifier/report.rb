@@ -57,8 +57,8 @@ module HarvestNotifier
         {
           "full_name" => full_name,
           "weekly_capacity" => hours,
-          "missing_hours" => hours,
-          "threshold" => threshold,
+          "missing_hours" => (hours - threshold),
+          "threshold" => 0,
           "total_hours" => 0
         }
       )
