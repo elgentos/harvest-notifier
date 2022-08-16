@@ -6,7 +6,7 @@ require "harvest_notifier/rollbar"
 require "harvest_notifier/base"
 
 module HarvestNotifier
-  DAILY_REPORT = %w[Tuesday Wednesday Thursday Friday].freeze
+  DAILY_REPORT = %w[Tuesday Wednesday Thursday Friday Saturday].freeze
 
   module_function
 
